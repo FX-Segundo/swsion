@@ -4,17 +4,30 @@ import './App.css'
 import Home from './pages/Home'
 import Navigation from './components/Navigation'
 import Conocenos from './pages/Conocenos'
+import { createBrowserRouter, Route, RouterProvider, Routes } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const router = createBrowserRouter([
+    { path: "/", element: <Home /> },
+    { path: "/conocenos", element: <Conocenos /> },
+  ])
 
   return (
-    <div className="App">
-      <Navigation />
-      <Home />
-      {/* <Conocenos  /> */}
-    </div>
+    <>
+      <header>
+        <Navigation />
+      </header>
+      <main>
+        {/*<Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="conocenos" element={<Conocenos />} />
+        </Routes>*/}
+        <RouterProvider router={router} />
+      </main>
+    </>
   )
+
 }
 
 export default App;

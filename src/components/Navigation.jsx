@@ -1,4 +1,5 @@
 import logo from "../assets/img/logosion.svg";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
     return (<div className="nav-bar">
@@ -8,10 +9,10 @@ const Navigation = () => {
         <nav className="menu">
             <ul>
                 <li>
-                    <a href="#">Inicio</a>
+                    <a href="/">Inicio</a>
                 </li>
                 <li>
-                    <a href="#">Conócenos</a>
+                    <a href="conocenos">Conocenos</a>
                 </li>
                 <li>
                     <a href="#">En Línea</a>
